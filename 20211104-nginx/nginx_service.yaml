@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: np-nginx
+  name: ng-nginx
 spec:
   selector:
     app: ng-nginx
