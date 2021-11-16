@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: nginx:1.0
+          image: 10.1.1.251/admin/nginx:1.0
       imagePullSecrets:
         - name: harborsecret
