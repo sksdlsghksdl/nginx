@@ -8,7 +8,7 @@ spec:
   selector:
     app: ng-nginx
   ports:
-    - port: 880
+    - port: 80
       protocol: TCP
       targetPort: 80
       nodePort: 30010
