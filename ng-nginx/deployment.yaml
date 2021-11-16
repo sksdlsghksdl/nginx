@@ -5,8 +5,6 @@ metadata:
   labels:
     app: ng-nginx
 spec:
-  imagePullSecrets:
-    - name: harborsecret
   replicas: 3
   selector:
     matchLabels:
