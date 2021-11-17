@@ -12,9 +12,7 @@ spec:
       app: ng-nginx
   strategy:
     type: RollingUpdate
-    rollingUp:
-      maxUnavailable: 25%
-      maxSurge: 25%
+    rollingUp      maxSurge: 25%
   template:
     metadata:
       labels:
