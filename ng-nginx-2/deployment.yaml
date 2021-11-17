@@ -9,11 +9,6 @@ spec:
   selector:
     matchLabels:
       app: ng-nginx
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxUnvailable: 1
-      maxSurge: 3
   template:
     metadata:
       labels:
@@ -21,12 +16,12 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: 10.1.1.251/admin/nginx:1.3
+          image: 10.1.1.251/admin/nginx:1.0
           volumeMounts:
             - name: mnt
-              mountPath: /etc/nginx/giftsmartcon.com
+              mountPath: /usr/share/nginx/html
       volumes:
         - name: mnt
           hostPath:
-            path: /home/k8s/mnt
+            path: /home/k8s/mnt/v1
             type: Directory
