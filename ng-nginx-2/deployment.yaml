@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ng-nginx
+  labels:
+    app: ng-nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ng-nginx
+      color: green
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: ng-nginx
+        color: green
+    spec:
+      containers:
+        - name: nginx
+          image: 10.1.1.251/admin/nginx:1.0
+          volumeMounts:
+            - name: mnt
+              mountPath: /home/k8s/mnt
+      volumes:
+        - name: mnt
+          emptyDir: {}
