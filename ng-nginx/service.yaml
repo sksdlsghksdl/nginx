@@ -3,10 +3,12 @@ kind: Service
 metadata:
   labels:
     app: ng-nginx
+    color: blue
   name: ng-nginx
 spec:
   selector:
     app: ng-nginx
+    color: blue
   ports:
     - port: 80
       protocol: TCP
