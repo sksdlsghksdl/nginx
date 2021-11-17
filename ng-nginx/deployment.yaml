@@ -4,16 +4,11 @@ metadata:
   name: ng-nginx
   labels:
     app: ng-nginx
-    role: rolling-update
 spec:
   replicas: 3
   selector:
     matchLabels:
       app: ng-nginx
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxSurge: 25%
   template:
     metadata:
       labels:
