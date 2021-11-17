@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: 10.1.1.251/admin/nginx:1.2
+          image: 10.1.1.251/admin/nginx:1.4
           volumeMounts:
             - name: mnt
               mountPath: /etc/nginx/giftsmartcon.com
