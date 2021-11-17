@@ -16,4 +16,4 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: 10.1.1.251:443/admin/chk-ip:1.0
+          image: 10.1.1.251:443/admin/chk-ip
