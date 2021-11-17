@@ -4,19 +4,16 @@ metadata:
   name: ng-nginx
   labels:
     app: ng-nginx
-    role: blue
 spec:
   replicas: 3
   selector:
     matchLabels:
       app: ng-nginx
-      role: blue
   strategy: {}
   template:
     metadata:
       labels:
         app: ng-nginx
-        role: blue
     spec:
       containers:
         - name: nginx
