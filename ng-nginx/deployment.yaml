@@ -18,12 +18,3 @@ spec:
       containers:
         - name: nginx
           image: 10.1.1.251/admin/nginx:1.4
-          volumeMounts:
-            - name: mnt
-              mountPath: /etc/nginx/giftsmartcon.com
-      volumes:
-        - name: mnt
-          hostPath:
-            path: /home/k8s/mnt
-            type: Directory
-
