@@ -17,3 +17,11 @@ spec:
       containers:
         - name: nginx
           image: 10.1.1.251/admin/nginx:1.0
+          volumeMounts:
+            - name: mnt
+              mountPath: /usr/share/nginx/html
+      volumes:
+        - name: mnt
+          hostPath:
+            path: /home/k8s/mnt/v1
+            type: Directory
