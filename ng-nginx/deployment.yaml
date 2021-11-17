@@ -23,5 +23,5 @@ spec:
       volumes:
         - name: mnt
           hostPath:
-            path: /home/k8s/mnt/v1
+            path: /home/k8s/mnt/v2
             type: Directory
