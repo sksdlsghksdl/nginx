@@ -4,6 +4,7 @@ metadata:
   name: ng-nginx
   labels:
     app: ng-nginx
+    role: rolling-update
 spec:
   replicas: 3
   selector:
@@ -11,9 +12,9 @@ spec:
       app: ng-nginx
   strategy:
     type: RollingUpdate
-    rollingUpdate:
-      maxUnavailable: 1
-      maxSurge: 3
+    rollingUp:
+      maxUnavailable: 25%
+      maxSurge: 25%
   template:
     metadata:
       labels:
